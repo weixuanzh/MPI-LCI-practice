@@ -141,6 +141,9 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 //Path to a program.
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
+//No help, variable specified on the command line.
+CMAKE_PREFIX_PATH:UNINITIALIZED=/home/weixuan/library/lci
+
 //Value Computed by CMake
 CMAKE_PROJECT_DESCRIPTION:STATIC=
 
@@ -212,12 +215,27 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//The directory containing a CMake configuration file for LCI.
+LCI_DIR:PATH=/home/weixuan/library/lci/lib/cmake
+
 //A list of process management backend with comma/space/semicolon
 // as delimitors.
 //\n      LCI will try each entry one by one until it found an available
 // backend to use
 //\n      (available entries: pmi1, pmi2, pmix, mpi, local)
 LCI_PM_BACKEND_DEFAULT:STRING=pmix;pmi2;pmi1;mpi;local
+
+//Path to a file.
+OFI_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+OFI_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libfabric.so
+
+//Arguments to supply to pkg-config
+PKG_CONFIG_ARGN:STRING=
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
 //Value Computed by CMake
 lci-random_BINARY_DIR:STATIC=/home/weixuan/mpiTest
@@ -242,6 +260,9 @@ lci_random_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 lci_random_SOURCE_DIR:STATIC=/home/weixuan/mpiTest
+
+//Path to a library.
+pkgcfg_lib__OFI_PC_fabric:FILEPATH=/usr/lib/x86_64-linux-gnu/libfabric.so
 
 
 ########################
@@ -328,6 +349,8 @@ CMAKE_GENERATOR_INSTANCE:INTERNAL=
 CMAKE_GENERATOR_PLATFORM:INTERNAL=
 //Name of generator toolset.
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
+//Test CMAKE_HAVE_LIBC_PTHREAD
+CMAKE_HAVE_LIBC_PTHREAD:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
 CMAKE_HOME_DIRECTORY:INTERNAL=/home/weixuan/mpiTest
@@ -393,6 +416,62 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding OFI
+FIND_PACKAGE_MESSAGE_DETAILS_OFI:INTERNAL=[/usr/include][/usr/lib/x86_64-linux-gnu/libfabric.so][v1.6.2()]
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29.1()]
+//Details about finding Threads
+FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//ADVANCED property for variable: OFI_INCLUDE_DIR
+OFI_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OFI_LIBRARY
+OFI_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_ARGN
+PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
+//Result of TRY_COMPILE
+THREADS_HAVE_PTHREAD_ARG:INTERNAL=TRUE
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
+_OFI_PC_CFLAGS:INTERNAL=
+_OFI_PC_CFLAGS_I:INTERNAL=
+_OFI_PC_CFLAGS_OTHER:INTERNAL=
+_OFI_PC_FOUND:INTERNAL=1
+_OFI_PC_INCLUDEDIR:INTERNAL=/usr/include
+_OFI_PC_INCLUDE_DIRS:INTERNAL=
+_OFI_PC_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lfabric
+_OFI_PC_LDFLAGS_OTHER:INTERNAL=
+_OFI_PC_LIBDIR:INTERNAL=/usr/lib/x86_64-linux-gnu
+_OFI_PC_LIBRARIES:INTERNAL=fabric
+_OFI_PC_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
+_OFI_PC_LIBS:INTERNAL=
+_OFI_PC_LIBS_L:INTERNAL=
+_OFI_PC_LIBS_OTHER:INTERNAL=
+_OFI_PC_LIBS_PATHS:INTERNAL=
+_OFI_PC_MODULE_NAME:INTERNAL=libfabric
+_OFI_PC_PREFIX:INTERNAL=/usr
+_OFI_PC_STATIC_CFLAGS:INTERNAL=
+_OFI_PC_STATIC_CFLAGS_I:INTERNAL=
+_OFI_PC_STATIC_CFLAGS_OTHER:INTERNAL=
+_OFI_PC_STATIC_INCLUDE_DIRS:INTERNAL=
+_OFI_PC_STATIC_LDFLAGS:INTERNAL=-L/usr/lib/x86_64-linux-gnu;-lfabric;-lpsm_infinipath;-lpsm2;-lrt;-lrdmacm;-libverbs;-lpthread;-ldl
+_OFI_PC_STATIC_LDFLAGS_OTHER:INTERNAL=
+_OFI_PC_STATIC_LIBDIR:INTERNAL=
+_OFI_PC_STATIC_LIBRARIES:INTERNAL=fabric;psm_infinipath;psm2;rt;rdmacm;ibverbs;pthread;dl
+_OFI_PC_STATIC_LIBRARY_DIRS:INTERNAL=/usr/lib/x86_64-linux-gnu
+_OFI_PC_STATIC_LIBS:INTERNAL=
+_OFI_PC_STATIC_LIBS_L:INTERNAL=
+_OFI_PC_STATIC_LIBS_OTHER:INTERNAL=
+_OFI_PC_STATIC_LIBS_PATHS:INTERNAL=
+_OFI_PC_VERSION:INTERNAL=1.6.2
+_OFI_PC_libfabric_INCLUDEDIR:INTERNAL=
+_OFI_PC_libfabric_LIBDIR:INTERNAL=
+_OFI_PC_libfabric_PREFIX:INTERNAL=
+_OFI_PC_libfabric_VERSION:INTERNAL=
+__pkg_config_arguments__OFI_PC:INTERNAL=QUIET;libfabric
+__pkg_config_checked__OFI_PC:INTERNAL=1
+//ADVANCED property for variable: pkgcfg_lib__OFI_PC_fabric
+pkgcfg_lib__OFI_PC_fabric-ADVANCED:INTERNAL=1
+prefix_result:INTERNAL=/usr/lib/x86_64-linux-gnu
 
