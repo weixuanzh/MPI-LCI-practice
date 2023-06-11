@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/weixuan/mpiTest/lci_random.c
+lci.h
+/home/weixuan/mpiTest/lci.h
+stdio.h
+-
+assert.h
+-
+stdlib.h
+-
+time.h
+-
+string.h
+-
+

@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/lci_pingpong.dir/lci_random.cpp.o -o lci_pingpong   -L/home/weixuan/library/lci/lib  -L/home/weixuan/mpiTest/lib/x86_64-linux-gnu/openmpi/lib  -Wl,-rpath,/home/weixuan/library/lci/lib:/home/weixuan/mpiTest/lib/x86_64-linux-gnu/openmpi/lib -lLCI 

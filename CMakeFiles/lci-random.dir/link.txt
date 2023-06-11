@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/lci-random.dir/lci_random.c.o  -o lci-random 
