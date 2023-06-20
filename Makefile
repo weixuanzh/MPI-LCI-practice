@@ -130,6 +130,19 @@ lci_pingpong/fast:
 .PHONY : lci_pingpong/fast
 
 #=============================================================================
+# Target rules for targets named lci_threads
+
+# Build rule for target.
+lci_threads: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lci_threads
+.PHONY : lci_threads
+
+# fast build rule for target.
+lci_threads/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lci_threads.dir/build.make CMakeFiles/lci_threads.dir/build
+.PHONY : lci_threads/fast
+
+#=============================================================================
 # Target rules for targets named mpi_pingpong
 
 # Build rule for target.
@@ -141,6 +154,43 @@ mpi_pingpong: cmake_check_build_system
 mpi_pingpong/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpi_pingpong.dir/build.make CMakeFiles/mpi_pingpong.dir/build
 .PHONY : mpi_pingpong/fast
+
+#=============================================================================
+# Target rules for targets named mpi_threads
+
+# Build rule for target.
+mpi_threads: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mpi_threads
+.PHONY : mpi_threads
+
+# fast build rule for target.
+mpi_threads/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpi_threads.dir/build.make CMakeFiles/mpi_threads.dir/build
+.PHONY : mpi_threads/fast
+
+lci_multithreaded.o: lci_multithreaded.cpp.o
+.PHONY : lci_multithreaded.o
+
+# target to build an object file
+lci_multithreaded.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lci_threads.dir/build.make CMakeFiles/lci_threads.dir/lci_multithreaded.cpp.o
+.PHONY : lci_multithreaded.cpp.o
+
+lci_multithreaded.i: lci_multithreaded.cpp.i
+.PHONY : lci_multithreaded.i
+
+# target to preprocess a source file
+lci_multithreaded.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lci_threads.dir/build.make CMakeFiles/lci_threads.dir/lci_multithreaded.cpp.i
+.PHONY : lci_multithreaded.cpp.i
+
+lci_multithreaded.s: lci_multithreaded.cpp.s
+.PHONY : lci_multithreaded.s
+
+# target to generate assembly for a file
+lci_multithreaded.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lci_threads.dir/build.make CMakeFiles/lci_threads.dir/lci_multithreaded.cpp.s
+.PHONY : lci_multithreaded.cpp.s
 
 lci_random.o: lci_random.cpp.o
 .PHONY : lci_random.o
@@ -165,6 +215,30 @@ lci_random.s: lci_random.cpp.s
 lci_random.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lci_pingpong.dir/build.make CMakeFiles/lci_pingpong.dir/lci_random.cpp.s
 .PHONY : lci_random.cpp.s
+
+mpi_multithreaded.o: mpi_multithreaded.cpp.o
+.PHONY : mpi_multithreaded.o
+
+# target to build an object file
+mpi_multithreaded.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpi_threads.dir/build.make CMakeFiles/mpi_threads.dir/mpi_multithreaded.cpp.o
+.PHONY : mpi_multithreaded.cpp.o
+
+mpi_multithreaded.i: mpi_multithreaded.cpp.i
+.PHONY : mpi_multithreaded.i
+
+# target to preprocess a source file
+mpi_multithreaded.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpi_threads.dir/build.make CMakeFiles/mpi_threads.dir/mpi_multithreaded.cpp.i
+.PHONY : mpi_multithreaded.cpp.i
+
+mpi_multithreaded.s: mpi_multithreaded.cpp.s
+.PHONY : mpi_multithreaded.s
+
+# target to generate assembly for a file
+mpi_multithreaded.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpi_threads.dir/build.make CMakeFiles/mpi_threads.dir/mpi_multithreaded.cpp.s
+.PHONY : mpi_multithreaded.cpp.s
 
 mpi_random_pingpong1.o: mpi_random_pingpong1.cpp.o
 .PHONY : mpi_random_pingpong1.o
@@ -199,10 +273,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... lci_pingpong"
+	@echo "... lci_threads"
 	@echo "... mpi_pingpong"
+	@echo "... mpi_threads"
+	@echo "... lci_multithreaded.o"
+	@echo "... lci_multithreaded.i"
+	@echo "... lci_multithreaded.s"
 	@echo "... lci_random.o"
 	@echo "... lci_random.i"
 	@echo "... lci_random.s"
+	@echo "... mpi_multithreaded.o"
+	@echo "... mpi_multithreaded.i"
+	@echo "... mpi_multithreaded.s"
 	@echo "... mpi_random_pingpong1.o"
 	@echo "... mpi_random_pingpong1.i"
 	@echo "... mpi_random_pingpong1.s"

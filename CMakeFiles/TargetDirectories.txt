@@ -1,4 +1,6 @@
 /home/weixuan/mpiTest/CMakeFiles/lci_pingpong.dir
+/home/weixuan/mpiTest/CMakeFiles/lci_threads.dir
 /home/weixuan/mpiTest/CMakeFiles/mpi_pingpong.dir
+/home/weixuan/mpiTest/CMakeFiles/mpi_threads.dir
 /home/weixuan/mpiTest/CMakeFiles/edit_cache.dir
 /home/weixuan/mpiTest/CMakeFiles/rebuild_cache.dir

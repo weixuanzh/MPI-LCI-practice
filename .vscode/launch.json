@@ -11,7 +11,7 @@
             "name": "g++.exe - Build and debug active file",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceRoot}/lci_pingpong",
+            "program": "${workspaceRoot}/mpi_threads",
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],

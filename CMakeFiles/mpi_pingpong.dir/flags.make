@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/weixuan/library/lci/include -I/lib/x86_64-linux-gnu/openmpi/include
 
-CXX_FLAGS = -g -g
+CXX_FLAGS = -g
 

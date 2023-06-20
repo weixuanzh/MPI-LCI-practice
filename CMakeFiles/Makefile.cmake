@@ -52,5 +52,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/lci_pingpong.dir/DependInfo.cmake"
+  "CMakeFiles/lci_threads.dir/DependInfo.cmake"
   "CMakeFiles/mpi_pingpong.dir/DependInfo.cmake"
+  "CMakeFiles/mpi_threads.dir/DependInfo.cmake"
   )

@@ -64,7 +64,9 @@ CMAKE_BINARY_DIR = /home/weixuan/mpiTest
 
 # The main recursive "all" target.
 all: CMakeFiles/lci_pingpong.dir/all
+all: CMakeFiles/lci_threads.dir/all
 all: CMakeFiles/mpi_pingpong.dir/all
+all: CMakeFiles/mpi_threads.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -73,7 +75,9 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/lci_pingpong.dir/clean
+clean: CMakeFiles/lci_threads.dir/clean
 clean: CMakeFiles/mpi_pingpong.dir/clean
+clean: CMakeFiles/mpi_threads.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -103,13 +107,39 @@ CMakeFiles/lci_pingpong.dir/clean:
 .PHONY : CMakeFiles/lci_pingpong.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/lci_threads.dir
+
+# All Build rule for target.
+CMakeFiles/lci_threads.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lci_threads.dir/build.make CMakeFiles/lci_threads.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lci_threads.dir/build.make CMakeFiles/lci_threads.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weixuan/mpiTest/CMakeFiles --progress-num=3,4 "Built target lci_threads"
+.PHONY : CMakeFiles/lci_threads.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/lci_threads.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/weixuan/mpiTest/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lci_threads.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/weixuan/mpiTest/CMakeFiles 0
+.PHONY : CMakeFiles/lci_threads.dir/rule
+
+# Convenience name for target.
+lci_threads: CMakeFiles/lci_threads.dir/rule
+.PHONY : lci_threads
+
+# clean rule for target.
+CMakeFiles/lci_threads.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lci_threads.dir/build.make CMakeFiles/lci_threads.dir/clean
+.PHONY : CMakeFiles/lci_threads.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/mpi_pingpong.dir
 
 # All Build rule for target.
 CMakeFiles/mpi_pingpong.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpi_pingpong.dir/build.make CMakeFiles/mpi_pingpong.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpi_pingpong.dir/build.make CMakeFiles/mpi_pingpong.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weixuan/mpiTest/CMakeFiles --progress-num=3,4 "Built target mpi_pingpong"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weixuan/mpiTest/CMakeFiles --progress-num=5,6 "Built target mpi_pingpong"
 .PHONY : CMakeFiles/mpi_pingpong.dir/all
 
 # Build rule for subdir invocation for target.
@@ -127,6 +157,32 @@ mpi_pingpong: CMakeFiles/mpi_pingpong.dir/rule
 CMakeFiles/mpi_pingpong.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpi_pingpong.dir/build.make CMakeFiles/mpi_pingpong.dir/clean
 .PHONY : CMakeFiles/mpi_pingpong.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/mpi_threads.dir
+
+# All Build rule for target.
+CMakeFiles/mpi_threads.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpi_threads.dir/build.make CMakeFiles/mpi_threads.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpi_threads.dir/build.make CMakeFiles/mpi_threads.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/weixuan/mpiTest/CMakeFiles --progress-num=7,8 "Built target mpi_threads"
+.PHONY : CMakeFiles/mpi_threads.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/mpi_threads.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/weixuan/mpiTest/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mpi_threads.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/weixuan/mpiTest/CMakeFiles 0
+.PHONY : CMakeFiles/mpi_threads.dir/rule
+
+# Convenience name for target.
+mpi_threads: CMakeFiles/mpi_threads.dir/rule
+.PHONY : mpi_threads
+
+# clean rule for target.
+CMakeFiles/mpi_threads.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mpi_threads.dir/build.make CMakeFiles/mpi_threads.dir/clean
+.PHONY : CMakeFiles/mpi_threads.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
